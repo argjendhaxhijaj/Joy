@@ -1,0 +1,286 @@
+{% extends "Joy/base.html" %}{% load static %} {% block content %}
+
+<head>
+  <style>
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .fotoja{
+      text-align: right;
+      padding: 0px;
+    }
+
+    .teksti{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 24px;
+    }
+
+    img{
+      width: 100%;
+    }
+
+    .card{
+        display: inline-block;
+        width: 372px;
+        margin:10px;
+        background-color: #168DB0;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        
+    }
+    .card-img-top{
+      border-radius: 0px;
+    }
+
+  h5{
+      color: white;
+      font-family: 'poppins';
+  }
+
+  h2{
+    text-align: center;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 24px;
+  }
+  </style>
+</head>
+
+<div class="container-fluid">
+        <div class="row" style="margin-top: 70px;">
+          <h2 class="col-lg-12">Joy Shorts</h2>
+        </div>
+        <div class="row" style="">
+            <div class="col-lg-12 text-center">
+                <div id="carouselExampleIndicators" style="background-color:#C1E4EE;" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators" style="z-index: 2 !important;" >
+                      <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Astéria</h5>
+                              <p class="card-text"></p>
+                              <a href="" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The earth</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The sword</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                         
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Astéria</h5>
+                              <p class="card-text"></p>
+                              <a href="" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The earth</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The sword</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Astéria</h5>
+                              <p class="card-text"></p>
+                              <a href="" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The earth</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                          <div class="card">
+                            <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">The sword</h5>
+                              <p class="card-text"></p>
+                              <a href="#" class="btn-info">Shiko filmin</a>
+                            </div>
+                          </div>
+        
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 50px;">
+          <h2 class="col-lg-12">Filmat e javës</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+              <div id="carouselExampleIndicators1" style="background-color:#C1E4EE;" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators" style="z-index: 2 !important;" >
+                    <li data-target="#carouselExampleIndicators1" style="position: relative; top: 20px;" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators1" style="position: relative; top: 20px;" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators1" style="position: relative; top: 20px;" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Astéria</h5>
+                            <p class="card-text"></p>
+                            <a href="" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The earth</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The sword</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                       
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Astéria</h5>
+                            <p class="card-text"></p>
+                            <a href="" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The earth</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The sword</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover1.png' %}" style="width: 372px; height: 167px;"  alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">Astéria</h5>
+                            <p class="card-text"></p>
+                            <a href="" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover2.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The earth</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                        <div class="card">
+                          <img class="card-img-top" src="{% static 'joy-static/moviecovers/cover3.png' %}" style="width: 372px; height: 167px;" alt="Card image cap">
+                          <div class="card-body">
+                            <h5 class="card-title">The sword</h5>
+                            <p class="card-text"></p>
+                            <a href="#" class="btn btn-info">Shiko filmin</a>
+                          </div>
+                        </div>
+      
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              
+          </div>
+      </div>
+
+        </div>
+
+    {% endblock content%}

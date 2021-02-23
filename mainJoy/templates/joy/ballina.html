@@ -1,0 +1,111 @@
+{% extends "Joy/base.html" %}{% load static %} {% block content %}
+
+<head>
+  <style>
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .fotoja{
+      text-align: right;
+      padding: 0px;
+    }
+
+    .teksti{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 24px;
+    }
+
+    img{
+      width: 100%;
+    }
+  </style>
+</head>
+
+    <div class="container-flud">
+      <div class="row">
+        <div style="height: 50px;"></div>
+      </div>
+
+      <div class="row" >
+        <div class="col-lg-12" style="padding: 0;">
+          <div id="carouselExampleIndicators" style="background-color:#C1E4EE;" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" style="z-index: 2 !important;" >
+              <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" style="position: relative; top: 20px;" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'joy-static/final1-01.png' %}"  style = "width: 90% !important; position: relative; left: 5%;" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'joy-static/final2-01.png' %}" style = "width: 90% !important; position: relative; left: 5%;" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'joy-static/final3-01.png' %}" style = "width: 90% !important; position: relative; left: 5%;" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-lg-8 col-md-8 col-sm-12 teksti" style="display: inline-block;">
+          <div class="col-sm-12 col-md-12" style="float: left;">
+          <span style="text-align: center;"><p>Të mësuarit s’ka qenë kurrë më lehtë...</p></span>
+          <p>
+            Metoda me inovative në treg për të mësuar gjëra të reja dhe për të aftësuar vetën në shumë lami të ndryshme tani vjen vetëm për ju. Aty ku mësimi është argëtues në mënyrën më të mirë të mundshme.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 fotoja">
+          <img style="padding: 0; height:100%;" src="{% static 'joy-static/circles.png' %}" alt="">
+        </div>
+      </div>
+
+
+        <div class="row" style="background-color: #168DB0;">
+          <div class="col-lg-12" style="text-align: center; font-size: 20px; color: white;">
+            <p>Përse Joy Online school</p>
+          </div>
+        </div>
+
+        <div class="row" style="background-color: #168DB0;">
+        <div class="col-lg-12" >
+          <div class="col-lg-4 col-md-4 teksti" style="font-size: 20px; color: white; display: inline-block; float: left; padding: 0 10px;">
+            <img src="{% static 'joy-static/gifi1.gif' %}" style="width: 60%; margin-left: 20%;" alt="">
+            <p>Lehtë dhe inovative për të mësuar. Këtu mësimi është argëtues në mënyrën më të mirë të mundshme.</p>
+          </div>
+          <div class="col-lg-4 col-md-4 teksti" style="font-size: 20px; color: white; display: inline-block; float: left; padding: 0 10px; border-right: solid 2px white; border-left: solid 2px white ;">
+            <img src="{% static 'joy-static/gifi2.gif' %}" style="width: 60%; margin-left: 20%;" alt="">
+            <p>Në Joy Online school të gjithë janë të rëndësishëm dhe ne jemi të gatshëm të të ndihmojmë në çdo kohë.</p>
+          </div>
+          <div class="col-lg-4 col-md-4 teksti" style="font-size: 20px; color: white; display: inline-block; float: left; padding: 0 10px;">
+            <img src="{% static 'joy-static/gifi1.gif' %}" style="width: 60%; margin-left: 20%;" alt="">
+            <p>Krijuar me precizitet dhe sjellë për ju nga ekspertë të fushës</p>
+          </div>
+        </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" style="text-align: center; margin-top: 80px; margin-bottom: 80px;">
+            <span style="font-family: 'handlee'; font-size: 80px; color: #168DB0;"><p>Ne jemi të lumtur që ju jeni ketu!</p></span>
+          </div>
+        </div>
+      
+    </div>
+
+    {% endblock content%}

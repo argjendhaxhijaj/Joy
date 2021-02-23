@@ -1,0 +1,28 @@
+{% extends "Joy/base.html" %}{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<head>
+    <style>
+        .teksti5{
+        text-align: justify;
+        color: #168DB0;
+        font-family: 'poppins';
+        font-size: 19px;
+        margin-bottom: 0 !important;
+      }
+    </style>
+</head>
+<div class="row">
+<div style="margin-top: 50px; height: 89vh;" class="teksti5">
+    <div class="col-lg-12">
+            <h2>Ju jeni ç'kyqur me suksess</h2>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                        <a class="ml-2" href="{% url 'login' %}">Kyqu këtu prapë</a>
+                    </small>
+                </div>
+    </div>
+</div>
+</div>
+{% endblock content%}

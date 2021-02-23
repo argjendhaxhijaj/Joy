@@ -1,0 +1,216 @@
+{% extends "Joy/base.html" %}{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/swiper.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/test1.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/main.css'%}">
+  
+  <style>
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    body{
+        background: url('{% static "joy-static/circles2.png" %}');
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 70px;
+    }
+
+    .teksti1{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 20px;
+    }
+
+    .teksti3{
+      text-align: justify;
+      color: #168DB0;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-family: 'poppins';
+      font-size: 16px;
+    }
+
+.container-fluid {
+  position: relative;
+  display: inline-block;
+
+}
+
+.ngjyra{
+    background-color: rgba(22, 140, 176, 0.5);
+    border-radius: 20px;
+    margin: 5px;
+    color: white;
+    text-align: justify;
+    font-family: 'Poppins';
+    overflow: auto;
+}
+
+.ngjyra1{
+    background-color: rgba(22, 140, 176, 0.5);
+    border-radius: 15px;
+    color: white;
+    padding: 10px 0px 0px 55px;
+    text-align: center !important;
+    font-family: 'Poppins';
+    margin: 5px;
+    vertical-align: middle !important;
+}
+.ngjyra2{
+    display: inline-block;
+    position: relative;
+    width: 80%;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgba(22, 140, 176, 0.5);
+    border-radius: 15px;
+    color: white;
+    padding-bottom:10px ;
+    font-family: 'Poppins';
+    vertical-align: middle !important;
+}
+
+.ngjyra3{
+    left: 5px;
+    width: 390px;
+    top: 65px;
+    background-color: rgba(22, 140, 176, 0.5);
+    border-radius: 15px;
+    vertical-align: middle !important;
+}
+
+*{ scroll-behavior: smooth;}
+
+@media only screen and (max-width: 550px) {
+    .ngjyra2{
+        width: 120px;
+        font-size: 10.5px;
+    }
+    .ngjyra3{
+        width: 130px;
+        
+    }
+}
+
+@media (max-width:650px) and (min-width:550px) {
+    .ngjyra2{
+        width: 140px;
+        font-size: 11.5px;
+    }
+    .ngjyra3{
+        width: 150px;
+        
+    }
+}
+
+@media (max-width:750px) and (min-width:650px) {
+    .ngjyra2{
+        width: 160px;
+        font-size: 12px;
+    }
+    .ngjyra3{
+        width: 170px;
+        
+    }
+}
+
+@media (max-width:850px) and (min-width:750px) {
+    .ngjyra2{
+        width: 180px;
+        font-size: 12.5px;
+    }
+    .ngjyra3{
+        width: 190px;
+        
+    }
+}
+
+@media (max-width:950px) and (min-width:850px) {
+    .ngjyra2{
+        width: 200px;
+        font-size: 12.5px;
+    }
+    .ngjyra3{
+        width: 210px;
+        
+    }
+}
+
+@media (max-width:1050px) and (min-width:950px) {
+    .ngjyra2{
+        width: 220px;
+        font-size: 12.5px;
+    }
+    .ngjyra3{
+        width: 230px;
+        
+    }
+}
+
+@media (max-width:1150px) and (min-width:1050px) {
+    .ngjyra2{
+        width: 260px;
+        font-size: 12.5px;
+    }
+    .ngjyra3{
+        width: 270px;
+        
+    }
+}
+
+@media (max-width:1400px) and (min-width:1150px) {
+    .ngjyra2{
+        width: 280px;
+        font-size:14px;
+    }
+    .ngjyra3{
+        width: 290px;
+        
+    }
+}
+
+@media (max-width:1500px) and (min-width:1400px) {
+    .ngjyra2{
+        width: 350px;
+        font-size: 15px;
+    }
+    .ngjyra3{
+        width: 360px;
+        
+    }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row text-center" style="margin-top: 60px;">
+     <div class="offset-lg-3 offset-3"></div>
+     <div class="ngjyra3" style="position: fixed;">
+        {% for kursi in course %}
+            <a href="#{{ kursi.moduli }}" class="col-lg-12 ngjyra2" style="text-decoration: none; height: 60px; margin: 5px;">{{ kursi.moduli }}</a>
+        {% endfor %}
+        </div>
+        
+     <div class="col-lg-9 col-9">
+        {% for kursi in course %}
+            <a name="{{ kursi.moduli }}"></a>
+            <div class="col-lg-12 ngjyra" style=" margin-top:30px;height: 550px;">
+                 <p style="margin: 20px;">{{ kursi.permbajtja }}</p>
+             </div>
+         {% endfor %}
+     </div>
+  </div>
+  </div>
+</body>
+
+{% endblock content%}

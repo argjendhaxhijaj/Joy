@@ -1,0 +1,28 @@
+{% extends "Joy/base.html" %}{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid desktop-row">
+    <div class="row" style="margin-top:70px;">
+        <div class="col-lg-6 col-md-12 col-12 teksti1">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="mb-4 teksti1">Kyqu këtu</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info form-control" type="submit">Kyqu</button>
+                </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Nuk ke llogari të krijuar? <a class="" href="{% url 'regjistrohu' %}">Krijo këtu</a>
+                </small>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12">
+            <img src="{% static 'joy-static/login.svg' %}" style="width: 80%; margin-left: 50px; " alt="">
+        </div>
+    </div>
+</div>
+{% endblock content%}

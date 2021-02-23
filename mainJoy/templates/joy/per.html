@@ -1,0 +1,179 @@
+{% extends "Joy/base.html" %}{% load static %} {% block content %}
+
+<head>
+    <style>
+         body{
+        
+        overflow-y: auto; /* Hide vertical scrollbar */
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+  .fotoja{
+    text-align: right;
+    padding: 0px;
+
+  }
+
+  img{
+      width: 100%;
+    }
+
+  .teksti{
+    text-align: justify;
+    color: #168DB0;
+    font-family: 'poppins';
+    font-size: 24px;
+  }
+
+  .img-circle{
+    border-radius: 50%;
+  }
+    </style>
+
+   <link  href="{% static 'joy-static/pe-icon-7-stroke1.css'%}" rel="stylesheet" />
+   
+   <link  href="{% static 'joy-static/rotating-card1.css'%}" rel='stylesheet' />
+   
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script href="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+  <link 
+  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'joy-static/card.css'%}">
+</head>
+
+<div class="container-fluid">
+    <div class="row">
+        <div style="height: 50px;"></div>
+      </div>
+
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-lg-8 col-md-8 col-sm-12 teksti" style="display: inline-block;">
+            <p style="margin-top: 70px;">Joy Online school është një webfaqe që ofron trajnime të ndryshme online. Ofron metodën me bashkohore të të mësuarit dhe hap dyert për të gjithë të interesuarit. Ofron trajnimin online të parë të animacionit në gjuhën shqipe.</p>
+          
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 fotoja" style="padding: 0; width: 100%;">
+          <img style="padding: 0; height:100%;" src="{% static 'joy-static/circles.png' %}" alt="">
+        </div>
+      </div>
+
+    <div class="row" style="background-color: #168DB0;">
+        <div class="col-lg-4 col-sm-4 col-4">
+        <img src="{% static 'joy-static/gifi2.gif' %}" style="width: 80%; alt=">
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-6">
+          <p class="teksti text-justify" style="color: white; font-size: 20px; float: right; margin-top:150px">Joy Online school ka për qellim që të i aftësoj të rinjtë në fushën e dizajnit dhe teknologjisë përmes metodave më të reja në treg.</p>
+        </div>
+    </div>
+
+    <div class="row" >
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-12" style="margin-top: 25px;">
+                          <div class="card-container">
+                            <div class="card">
+                                <div class="front">
+                                    <div class="cover">
+                                        <img src="{% static 'joy-static/background.jpg' %}" alt="">
+                                    </div>
+                                    <div class="user">
+                                        <img class="img-circle" src="{% static 'joy-static/profili.png' %}" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h3 class="name">Argjend Haxhijaj</h3>
+                                            <p class="profession">CEO</p>
+                                            <p class="text-center">"E vetmja gjë që na ndalon është vetvetja"</p>
+                                        </div>
+                                        <div class="footer">
+                                            <i class="fa fa-mail-forward"></i> 
+                                        </div>
+                                    </div>
+                                </div> <!-- end front panel -->
+                                <div class="back" style="background-color: #C1E4EE; color: #168DB0 ;">
+                                    <div class="header1">
+                                        <h5 class="motto">"E vetmja gjë që na ndalon është vetvetja"</h5>
+                                    </div>
+                                    <div class="content">
+                                        <div class="main">
+                                            <h4 class="text-center">Njohuritë</h4>
+                                            <p class="text-center">Web/graphic designer, Adobe Photoshop, Blender, Python, Javascript dhe shumë të tjera...</p>
+
+                                            <div class="stats-container">
+                                                <div class="stats">
+                                                    <h4>257</h4>
+                                                    <p>
+                                                        Followers
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>388</h4>
+                                                    <p>
+                                                        Following
+                                                    </p>
+                                                </div>
+                                                <div class="stats">
+                                                    <h4>4</h4>
+                                                    <p>
+                                                        Projects
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="social-links text-center">
+                                            <a href="https://www.facebook.com/argjend.haxhijaj" class="facebook alink"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                            <a href="https://www.instagram.com/argjend_haxhijaj/" class="instagram alink"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                            <a href="https://twitter.com/ArgjendHaxhijaj" class="twitter alink"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div> <!-- end back panel -->
+                            </div> <!-- end card -->
+
+                            
+                        </div> <!-- end card-container -->
+                    </div> <!-- end col sm 3 -->
+
+                    
+              </div>
+
+              <script href="{% static 'joy-static/jquery-1.10.2.js'%}" type="text/javascript"></script>
+              <script href="{% static 'joy-static/]bootstrap.min.js'%}" type="text/javascript"></script>
+
+              <script type="text/javascript">
+                $().ready(function(){
+                    $('[rel="tooltip"]').tooltip();
+
+                    $('a.scroll-down').click(function(e){
+                        e.preventDefault();
+                        scroll_target = $(this).data('href');
+                          $('html, body').animate({
+                              scrollTop: $(scroll_target).offset().top - 60
+                          }, 1000);
+                    });
+
+                });
+
+                function rotateCard(btn){
+                    var $card = $(btn).closest('.card-container');
+                    console.log($card);
+                    if($card.hasClass('hover')){
+                        $card.removeClass('hover');
+                    } else {
+                        $card.addClass('hover');
+                    }
+                } 
+              </script>
+
+     </div>
+      </div>
+    </div>
+</div>
+
+{% endblock content%}

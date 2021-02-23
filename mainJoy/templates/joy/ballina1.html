@@ -1,0 +1,229 @@
+{% extends "Joy/base.html" %}{% load static %} {% block content %}
+
+<head>
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/swiper.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/test1.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/main.css'%}">
+  
+  <style>
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .fotoja{
+      text-align: right;
+      padding: 0px;
+    }
+
+    .teksti1{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 16px;
+    }
+
+    .teksti3{
+      text-align: justify;
+      color: white;
+      font-family: 'poppins';
+      font-size: 16px;
+    }
+
+.container-fluid {
+  position: relative;
+  display: inline-block;
+}
+
+.card {
+  display: inline-block;
+  width: 250px;
+  height: 350px;
+  background-color: rgba(22, 140, 176, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(17, 108, 136);
+  transition: 0.4s ease-out;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 2%;
+}
+
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+}
+
+
+.circle {
+  position: relative;
+  top: -38px;
+  /* left: calc(50% - 60px); */
+  left: -35px;
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 1s ease-out;
+}
+
+svg {
+  fill: rgba(22, 140, 176, 0);
+  stroke-width: 5px;
+  height: 80px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 180;
+  transition: 1s ease-out;
+}
+
+.teksti2{
+  text-align: center;
+      color: white;
+      font-family: 'poppins';
+      font-size: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row" style="text-align: center; color: #168DB0; font-family: 'poppins'; font-size: 24px;margin-top: 80px;">
+      <h2 class="col-lg-12">Trajnimet</h2>
+    </div>
+    <div class="row text-center" style="margin-top: 10px;">
+      <div class="col-lg-12 col-sm-12 col-12">
+
+        <a href="{% url 'Joy-course' %}"><div class="card teksti2">
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="stroke" cx="60" cy="60" r="15"/>
+          </svg>
+          </div>
+          <img src="{% static 'joy-static/icon5.png' %}" style="width: 60%; margin-bottom: 10px;" alt="">
+          <h1>Animacion</h1>
+        </div></a>
+
+        <a href="{% url 'Joy-course1' %}"><div class="card teksti2">
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="15"/>
+          </svg>
+          </div>
+          <img src="{% static 'joy-static/icon2.png' %}" style="width: 60%; margin-bottom: 10px;" alt="">
+          <h1>Html & Css</h1>
+        </div></a>
+
+        <a href="{% url 'Joy-course2' %}"><div class="card teksti2">
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="15"/>
+          </svg>
+          </div>
+          <img src="{% static 'joy-static/icon3.png' %}" style="width: 60%; margin-bottom: 10px;" alt="">
+          <h1>Python</h1>
+        </div></a>
+
+        <a href="{% url 'Joy-course3' %}"><div class="card teksti2">
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="15"/>
+          </svg>
+          </div>
+          <img src="{% static 'joy-static/icon7.png' %}" style="width: 60%; margin-bottom: 10px;" alt="">
+          <h1>JavaScript</h1>
+        </div></a>
+
+        <a href="{% url 'Joy-course4' %}"><div class="card teksti2">
+          <div class="circle">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <circle class="stroke" cx="60" cy="60" r="15"/>
+          </svg>
+          </div>
+          <img src="{% static 'joy-static/icon4.png' %}" style="width: 60%; margin-bottom: 10px;" alt="">
+          <h1>Blender</h1>
+        </div></a>
+        
+      </div>
+    </div>
+
+   <!-- <div class="row teksti3" style="background-color: #168DB0; margin-top: 30px;">
+      <div class="col-lg-3">
+        <img src="{% static 'joy-static/gifi-top.gif' %}" style="width: 60%; " alt="">
+      </div>
+
+      <div class="col-lg-9">
+        <p>Ketu ju mund të mesoni më shumë rreth teknologjis dhe dizajnit duke ndjekur trajnimet tone dhe puntoritë ju do të arrini të kuptoni çdo gjë rreth industrisë.</p>
+      </div>
+    </div>-->
+    
+    <!--<div class="row">
+      <div class="col-lg-12">
+        <a href="https://online.flippingbook.com/view/365154/" class="fbo-embed"  data-fbo-id="365154"  data-fbo-lightbox="yes" data-fbo-width="740px" data-fbo-height="480px"   data-fbo-version="1"   style="max-width: 100%">The  Animator&#39;s Survival Kit</a><script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=365154"></script>
+        <a href="https://online.flippingbook.com/view/487133/" class="fbo-embed"  data-fbo-id="487133"  data-fbo-lightbox="yes" data-fbo-width="740px" data-fbo-height="480px"   data-fbo-version="1"   style="max-width: 100%">Basics Animation: Digital Animation</a><script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=487133"></script>
+      </div>
+    </div>-->
+    <div class="row" style="text-align: center; color: #168DB0; font-family: 'poppins'; font-size: 24px;  margin-top: 30px;">
+      <h2 class="col-lg-12">Libraria</h2>
+    </div>
+    <div class="row" style="background-color: #168DB0; margin-top: 10px;">
+      <div class="col-lg-12">
+        <div class="swiper-container" style="margin:10px; margin-top: 20px;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/365154/" target="_blank"><img class="img1" src="{% static 'joy-static/book1.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/487133/" target="_blank"><img class="img1" src="{% static 'joy-static/book2.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/805909/" target="_blank"><img class="img1" src="{% static 'joy-static/book3.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/157599/" target="_blank"><img class="img1" src="{% static 'joy-static/book4.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/557640/" target="_blank"><img class="img1" src="{% static 'joy-static/book5.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/74785/" target="_blank"><img class="img1" src="{% static 'joy-static/book6.png' %}" alt=""></a></div>
+            <div class="swiper-slide"> <a href="https://online.flippingbook.com/view/741051/" target="_blank"><img class="img1" src="{% static 'joy-static/book7.png' %}" alt=""></a></div>
+            
+          </div>
+          <div class="swiper-pagination"></div>
+      </div>
+    
+      <script type="text/javascript" src="{% static 'joy-static/swipermin.js'%}"></script>
+    
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+      </div>
+    </div>
+
+  </div>
+</body>
+{% endblock content%}

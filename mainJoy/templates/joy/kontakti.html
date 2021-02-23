@@ -1,0 +1,86 @@
+{% extends "Joy/base.html" %}{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<head>
+  
+  
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/swiper.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/test1.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'joy-static/main.css'%}">
+  
+  <style>
+
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+    .fotoja{
+      text-align: right;
+      padding: 0px;
+    }
+
+    .teksti1{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 20px;
+    }
+
+    .teksti3{
+      text-align: justify;
+      color: #168DB0;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-family: 'poppins';
+      font-size: 16px;
+    }
+
+.container-fluid {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 60px;">
+      <div class="offset-3"></div>
+      <div class="col-lg-6">
+        <h1 class="teksti1">Shtoje punën tende tek ne:)</h1>
+        <form action="" method="POST">
+        {% csrf_token %}
+
+        <label class="teksti3" for="emri">Emri:</label>
+        <input class="form-control" type="text" name="first_name" id="emri"/><br/>
+
+        <label class="teksti3" for="mbiemri">Mbiemri:</label>
+        <input class="form-control" type="text" name="last_name" id="mbiemri"/><br/>
+
+        <label class="teksti3" for="titulli">Titulli i projektit:</label>
+        <input class="form-control" type="text" name="title" id="titulli"/><br/>
+
+        <label class="teksti3" for="desc">Përmbajtja:</label>
+        <textarea class="form-control" cols="35" rows="8" name="content" id="desc">
+        </textarea>
+
+        <label class="teksti3" for="document">Posteri:</label>
+        <p class="text-muted">Keni kujdes dimensionet e posterit duhet të jenë 1197px me 540px</p>
+        <input class="form-control" type="file" name="document" id="document">
+
+        <label class="teksti3" for="url">Linku i projektit:</label>
+        <input class="form-control" type="text" name="url" id="url">
+
+        <input class="form-control btn btn-info" type="submit" style="margin-top:20px ; margin-bottom: 20px;" value="Dergo"/>
+        </form>
+        </div>
+        <div class="offset-3"></div>
+    </div>
+  </div>
+</body>
+
+{% endblock content%}

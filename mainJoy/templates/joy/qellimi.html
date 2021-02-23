@@ -1,0 +1,41 @@
+{% extends "Joy/base.html" %}{% load static %} {% block content %}
+<head>
+   
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ab4b18aec0.js">
+    </head>
+<style>
+    
+    .teksti1{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 18px;
+      background-color: #C1E4EE;
+    }
+
+    .link{
+      text-align: justify;
+      color: #168DB0;
+      font-family: 'poppins';
+      font-size: 24px;
+    }
+</style>
+
+<main role="main" class="container teksti1">
+    <div class="jumbotron" style="background-color: #C1E4EE;">
+        {% for post in posts %}
+            <article class="media content-section" style="margin-top: 2%; border: 2px solid #168DB0; padding: 10px;">
+                <div class="media-body">
+                    <div class="article-metadata">
+                            <h1 class="mr-2 link" href="#">{{ post.author }}</h1>
+                            <small class="text-muted">{{ post.date_posted }}</small>
+                    </div>
+                    <h2 class="article-title link" href="#">{{ post.title }}</h2>
+                    <p class="article-content">{{ post.content }}</p>
+                </div>
+            </article>
+            {% endfor %}
+    </div>
+</main>
+
+{% endblock content%}

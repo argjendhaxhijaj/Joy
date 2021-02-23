@@ -1,0 +1,68 @@
+{% extends "Joy/base.html" %}{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<head>
+    <style>
+        .teksti7{
+        text-align: justify;
+        color: #168DB0;
+        font-family: 'poppins';
+        font-size: 19px;
+        margin-bottom: 0 !important;
+      }
+
+      .teksti8{
+        text-align: justify;
+        color: #168DB0;
+        font-family: 'poppins';
+        font-size: 15px;
+      }
+
+      .img2{
+          margin-left: 10px;
+      }
+    </style>
+</head>
+<div class="container-fluid">
+    <!--<div class="row" style="margin-top: 60px;">
+        <div class="col-lg-12">
+          {% if message %}
+            {% for message in messages %}
+              <div class="alert alert-success">
+                {{ message.tags }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>-->
+
+    <div class="row text-center" style="margin-top: 60px; margin-bottom: 29vh;">
+        <div class="col-lg-5 teksti7">
+            <div class="media">
+                <img class="rounded-circle img2 account-img" src="{{ user.profile.image.url }}" style=" width:150px; height: 150px; margin-right: 30px;">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username}}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7 teksti8">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="mb-4">Informacioni i profilit</legend>
+                {{ u_form|crispy }}
+                {{ p_form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="form-control btn btn-outline-info" type="submit">Përditëso të dhënat</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+</div>
+{% endblock content%}
